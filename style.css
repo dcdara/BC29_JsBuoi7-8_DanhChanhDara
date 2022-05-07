@@ -1,0 +1,56 @@
+.item__left {
+    background-color: #ffffff;
+    box-shadow: 0 0 60px 0 rgb(0 0 0 / 10%);
+    padding: 10px;
+    border-radius: 5px;
+
+}
+
+.card {
+    border: none;
+}
+
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    color: #fff;
+    background-color: #007bff;
+    /* border-radius: 20px; */
+}
+
+.item__left a {
+    color: #5f4545;
+}
+
+.ketqua {
+    background-color: antiquewhite;
+    font-size: 18px;
+    padding: 10px;
+    font-weight: 600;
+    color: red;
+    border-radius: 5px;
+}
+
+.content__main {
+    padding-top: 40px;
+    border-radius: 10px;
+    background-color: whitesmoke;
+    padding: 10px;
+}
+
+.card-body {
+    padding: 10px;
+}
+
+.btn-sm {
+    padding: 0.3rem 0.5rem;
+    font-size: 1rem;
+}
+
+h3 {
+    font-size: 20px;
+}
+
+.row {
+    margin-right: 0px;
+    margin-left: 0px;
+}

@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Bài tập Js buổi 7-8</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <section>
+        <div class="container py-5">
+            <div class="row col-12 content__main">
+                <div class="col-12">
+                    <div class="row align-items-center">
+                        <div class="form-group col-4">
+                            <input class="form-control" id="txtNhapSo" type="number" placeholder="Nhập số n">
+                        </div>
+                        <div class="form-group col-2">
+                            <button id="btnThemArray" class="btn btn-primary btn-sm col-12" type="button">Thêm
+                                số</button>
+                        </div>
+                    </div>
+                    <div class="form-group ketqua col-6" id="reSultThemSo">
+                    </div>
+                    <hr>
+                </div>
+
+
+                <div class="col-5">
+                    <div class="nav flex-column nav-pills  item__left" id="v-pills-tab" role="tablist"
+                        aria-orientation="vertical">
+
+                        <a class="nav-link active" id="bai1-tab" data-toggle="pill" href="#bai1" role="tab"
+                            aria-controls="bai1" aria-selected="true">Bài 1: Tổng các số dương</a>
+                        <a class="nav-link" id="bai2-tab" data-toggle="pill" href="#bai2" role="tab"
+                            aria-controls="bai2" aria-selected="false">Bài 2: Đếm số dương</a>
+                        <a class="nav-link" id="bai3-tab" data-toggle="pill" href="#bai3" role="tab"
+                            aria-controls="bai3" aria-selected="false">Bài 3: Tìm số nhỏ nhất</a>
+                        <a class="nav-link" id="bai4-tab" data-toggle="pill" href="#bai4" role="tab"
+                            aria-controls="bai4" aria-selected="false">Bài 4: Tìm số dương nhỏ nhất</a>
+                        <a class="nav-link" id="bai5-tab" data-toggle="pill" href="#bai5" role="tab"
+                            aria-controls="bai5" aria-selected="false">Bài 5: Tìm số chẵn cuối cùng</a>
+                        <a class="nav-link" id="bai6-tab" data-toggle="pill" href="#bai6" role="tab"
+                            aria-controls="bai6" aria-selected="false">Bài 6: Đổi chỗ</a>
+                        <a class="nav-link" id="bai7-tab" data-toggle="pill" href="#bai7" role="tab"
+                            aria-controls="bai7" aria-selected="false">Bài 7: Sắp xếp tăng dần</a>
+                        <a class="nav-link" id="bai8-tab" data-toggle="pill" href="#bai8" role="tab"
+                            aria-controls="bai8" aria-selected="false">Bài 8: Tìm số nguyên tố đầu tiên</a>
+                        <a class="nav-link" id="bai9-tab" data-toggle="pill" href="#bai9" role="tab"
+                            aria-controls="bai9" aria-selected="false">Bài 9: Đếm số nguyên</a>
+                        <a class="nav-link" id="bai10-tab" data-toggle="pill" href="#bai10" role="tab"
+                            aria-controls="bai10" aria-selected="false">Bài 10: So sánh số lượng số âm và số dương</a>
+
+
+                    </div>
+                </div>
+                <div class="item__right col-3">
+                    <div class="tab-content" id="v-pills-tabContent">
+                        <div class="tab-pane fade show active" id="bai1" role="tabpanel" aria-labelledby="bai1-tab">
+                            <div class="card card-outline-secondary">
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <button id="btnTongArray" class="btn btn-primary btn-sm btn-block"
+                                                type="button">Tổng số dương</button>
+                                        </div>
+                                    </div>
+
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="bai2" role="tabpanel" aria-labelledby="bai2-tab">
+                            <div class="card card-outline-secondary">
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <button id="btnDemArray" class="btn btn-primary btn-sm btn-block"
+                                                type="button">Đếm số dương</button>
+                                        </div>
+                                    </div>
+
+                                    </form>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="bai3" role="tabpanel" aria-labelledby="bai3-tab">
+                            <div class="card card-outline-secondary">
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <button id="btnMinArray" class="btn btn-primary btn-sm btn-block"
+                                                type="button">Số nhỏ nhất</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+
+
+                        </div>
+                        <div class="tab-pane fade" id="bai4" role="tabpanel" aria-labelledby="bai4-tab">
+                            <div class="card card-outline-secondary">
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <button id="btnminDuongArray" class="btn btn-primary btn-sm btn-block"
+                                                type="button">Số dương nhỏ nhất</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="bai5" role="tabpanel" aria-labelledby="bai5-tab">
+                            <div class="card card-outline-secondary">
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <button id="btnTimSoChanArray" class="btn btn-primary btn-sm btn-block"
+                                                type="button">Tìm số chẵn</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="bai6" role="tabpanel" aria-labelledby="bai6-tab">
+                            <div class="card card-outline-secondary">
+                                <div class="card-body">
+                                    <div class="form-group col-12">
+                                        <input class="form-control" id="txtVitri_1" type="number"
+                                            placeholder="Nhập số vị trí 1">
+                                    </div>
+                                    <div class="form-group col-12">
+                                        <input class="form-control" id="txtVitri_2" type="number"
+                                            placeholder="Nhập số số vị trí 2">
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <button id="btnDoiChoArray" class="btn btn-primary btn-sm btn-block"
+                                                type="button">Đổi chỗ</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="bai7" role="tabpanel" aria-labelledby="bai7-tab">
+                            <div class="card card-outline-secondary">
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <button id="btnSapXepArray" class="btn btn-primary btn-sm btn-block"
+                                                type="button">Sắp xếp</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="bai8" role="tabpanel" aria-labelledby="bai8-tab">
+                            <div class="card card-outline-secondary">
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <button id="btnTimSoNTArray" class="btn btn-primary btn-sm btn-block"
+                                                type="button">Tìm số nguyên tố</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="bai9" role="tabpanel" aria-labelledby="bai9-tab">
+                            <div class="card card-outline-secondary">
+                                <div class="card-body">
+                                    <div class="form-group col-12">
+                                        <input class="form-control" id="txtSonguyen" type="number"
+                                            placeholder="Nhập số">
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-12">
+                                            <button id="btnThemSoArray" class="btn btn-primary btn-sm btn-block"
+                                                type="button">Thêm số</button>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="form-group col-12">
+                                        <div class="col-12 ketqua" id="ketQuaThemSo">
+                                        </div>
+                                    </div>
+                                    <div class="form-group row">
+                                        <div class="col-12">
+                                            <button id="btnDemSoArray" class="btn btn-primary btn-sm btn-block"
+                                                type="button">Đếm số nguyên</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="tab-pane fade" id="bai10" role="tabpanel" aria-labelledby="bai10-tab">
+                            <div class="card card-outline-secondary">
+                                <div class="card-body">
+                                    <div class="form-group row">
+                                        <div class="col-md-12">
+                                            <button id="btnSoSanhArray" class="btn btn-primary btn-sm btn-block"
+                                                type="button">So sánh</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="col-4">
+                    <h3 class="text-center">KẾT QUẢ</h3>
+                    <div class="form-group ketqua" id="ketQua">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="./main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
